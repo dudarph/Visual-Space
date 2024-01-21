@@ -1,0 +1,592 @@
+/* Fonts
+=============================*/
+/* manrope-regular - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/manrope-v15-cyrillic_latin-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* manrope-500 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/manrope-v15-cyrillic_latin-500.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* manrope-600 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/manrope-v15-cyrillic_latin-600.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* manrope-700 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/manrope-v15-cyrillic_latin-700.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/montserrat-v26-cyrillic_latin-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/montserrat-v26-cyrillic_latin-600.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* Base
+=============================*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-size: 16px;
+	line-height: normal;
+	/* Буду подгонять line-height */
+	font-weight: normal;
+	color: #181818;
+
+	background: #F4F4F4;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.btn {
+	border-radius: 16px;
+	background: #202020;
+}
+
+.heading {
+	color: #181818;
+	font-family: 'Montserrat';
+	font-size: 64px;
+	font-weight: 600;
+	line-height: 104.499%;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* Header
+=============================*/
+.header {
+	padding: 23px 0;
+
+	border-bottom: solid 1px #181818;
+}
+
+.header__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Nav */
+.header__nav-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header__nav-item {
+	margin-right: 56px;
+}
+
+.header__nav-item:last-child {
+	margin-right: 0;
+}
+
+.header__nav-link {
+	color: #181818;
+	font-size: 18px;
+	letter-spacing: 0.54px;
+	text-decoration: none;
+}
+
+.header__nav-link--active {
+	font-weight: 700;
+}
+
+/* Button */
+.header__button {
+	padding: 20px 24px;
+
+	color: #E6E6E6;
+	font-family: 'Manrope';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.32px;
+
+	transition: .2s linear;
+}
+
+.header__button:hover,
+.header__button:active {
+	background-color: #121212;
+}
+
+/* Services
+=============================*/
+.services {
+	padding: 35px 0 77px 0;
+}
+
+/* Nav */
+.services__nav {
+	margin-bottom: 35px;
+}
+
+.services__nav-list {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.services__nav-item {
+	margin-right: 144px;
+	text-align: center;
+}
+
+.services__nav-item:last-child {
+	margin-right: 0;
+}
+
+.services__nav-item:nth-child(3),
+.services__nav-item:nth-child(4) {
+	white-space: nowrap;
+}
+
+.services__nav-link {
+	color: #505050;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.48px;
+	text-decoration: none;
+
+	transition: .2s linear;
+}
+
+.services__nav-link:hover,
+.services__nav-link:active {
+	color: #2c2c2c;
+}
+
+.services__nav-link--active {
+	font-weight: 700;
+	color: #181818;
+}
+
+/* Swiper */
+.image-slider {
+	margin-bottom: 62px;
+}
+
+.image-slider__wrapper {
+	text-align: center;
+}
+
+.image-slider__slide {
+	opacity: .7;
+	transition: .5s linear;
+}
+
+.image-slider__slide.swiper-slide-active {
+	opacity: 1;
+}
+
+
+.swiper-button-prev {
+	width: 93px;
+
+	background: url('../img/svg/arrow.svg') no-repeat 90% center;
+	transition: .2s all;
+
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+}
+
+.swiper-button-prev:hover {
+	background: url('../img/svg/arrow.svg') no-repeat left center;
+}
+
+.swiper-button-next {
+	width: 93px;
+
+	background: url('../img/svg/arrow.svg') no-repeat 90% center;
+	transform: rotate(-180deg);
+	transition: .2s all;
+
+	position: absolute;
+	z-index: 2;
+	right: 25%;
+}
+
+.swiper-button-next:hover {
+	background: url('../img/svg/arrow.svg') no-repeat left center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none;
+}
+
+/* Smile img */
+.smile-img {
+	margin-bottom: 62px;
+
+	text-align: center;
+}
+
+/* Description */
+.serv-desc {
+	display: flex;
+	flex-direction: column;
+	gap: 109px;
+}
+
+.for-what {
+	display: flex;
+	gap: 145px;
+}
+
+.for-what__title {
+	display: block;
+	white-space: nowrap;
+}
+
+.for-what__subtitle {
+	max-width: 716px;
+}
+
+.for-what__text {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 106%;
+	letter-spacing: 0.64px;
+}
+
+.for-whom {
+	display: flex;
+	gap: 145px;
+}
+
+.for-whom__title {
+	display: block;
+	white-space: nowrap;
+}
+
+.for-whom__subtitle {
+	max-width: 716px;
+}
+
+.for-whom__text {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 106%;
+	letter-spacing: 0.64px;
+}
+
+
+/* Application
+=============================*/
+.application {
+	padding-bottom: 62px;
+}
+
+.application__title {
+	margin-bottom: 16px;
+}
+
+.application__subtitle {
+	margin-bottom: 62px;
+
+	font-size: 32px;
+	line-height: 104.499%;
+}
+
+/* Form */
+.app-form__inputs {
+	margin-bottom: 42px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	column-gap: 48px;
+	row-gap: 32px;
+}
+
+.app-form__input:nth-child(1) {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.app-form__input:nth-child(2) {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.app-form__input:nth-child(3) {
+	grid-area: 1 / 2 / 3 / 3;
+}
+
+.app-form__input {
+	width: 498px;
+	max-width: 100%;
+	padding: 24px 0 24px 23px;
+	align-items: center;
+
+	color: #181818;
+	font-family: 'Manrope';
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.48px;
+
+	border: 0;
+	border-radius: 16px;
+	background: #E1E1E1;
+	transition: .2s linear;
+}
+
+.app-form__input:focus {
+	border: 2px solid #121212;
+}
+
+textarea.app-form__input {
+	width: 654px;
+	max-width: 100%;
+	padding: 24px 0 0 23px;
+	resize: none;
+}
+
+.error-box .app-form__input {
+	border: 2px solid #D45C5C;
+	;
+}
+
+.error-box .app-form__input::placeholder {
+	color: #D45C5C;
+}
+
+.error-label {
+	color: #D45C5C;
+	font-family: 'Manrope';
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.26px;
+}
+
+.app-form__submit {
+	margin-bottom: 52px;
+	display: flex;
+	column-gap: 40px;
+	align-items: center;
+}
+
+.app-form__button {
+	padding: 24px 36px;
+
+	color: #E6E6E6;
+	font-family: 'Manrope';
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.48px;
+	white-space: nowrap;
+
+	transition: .2s linear;
+}
+
+.app-form__button:hover,
+.app-form__button:active {
+	background-color: #121212;
+}
+
+.app-form__agreed {
+	color: #505050;
+
+	font-family: 'Manrope';
+	font-size: 20px;
+	line-height: 104.499%;
+}
+
+.app-form__socials {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact {
+	color: #505050;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.48px;
+}
+
+.contact:first-child {
+	margin-bottom: 16px;
+}
+
+.contact--color--dark {
+	color: #181818;
+}
+
+.app-form__s-net {
+	text-align: right;
+}
+
+.s-net__title {
+	color: #181818;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.48px;
+}
+
+/* Footer
+=============================*/
+.footer {
+	padding: 48px 0 73px 0;
+
+	background: #252525;
+}
+
+.footer__wrapper {
+	display: flex;
+
+}
+
+.footer__logo {
+	max-width: 211px;
+	margin-right: 93px;
+}
+
+.footer__logo-pic {
+	padding-bottom: 16px;
+}
+
+.footer__logo-agreement {
+	color: #E1E1E1;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 90.156%;
+	letter-spacing: 0.36px;
+}
+
+.agreement-link {
+	color: inherit;
+
+	transition: .2s linear;
+}
+
+.agreement-link:hover,
+.agreement-link:active {
+	color: #949191;
+}
+
+
+.footer__nav {
+	display: flex;
+}
+
+.footer__menu:nth-child(1) {
+	margin-right: 172px;
+}
+
+.footer__menu:nth-child(2) {
+	margin-right: 71px;
+}
+
+.footer__menu-title {
+	margin-bottom: 12px;
+
+	color: #E1E1E1;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 104.499%;
+	letter-spacing: 0.4px;
+}
+
+.footer__menu-link {
+	margin-bottom: 9px;
+
+	color: #C3C3C3;
+	font-size: 16px;
+	line-height: 104.499%;
+	letter-spacing: 0.32px;
+	text-decoration: none;
+
+	transition: .2s linear;
+}
+
+.footer__menu-link:hover,
+.footer__menu-link:active {
+	color: #949191;
+}
+
+.footer__menu-info {
+	margin-bottom: 12px;
+
+	color: #C3C3C3;
+	font-size: 16px;
+	line-height: 104.499%;
+	letter-spacing: 0.32px;
+}
+
+.footer__s-net-link {
+	margin-right: 16px;
+}
