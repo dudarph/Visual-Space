@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
-		<!-- Если хочешь, сделай фавикон -->
 		<title>Visual Space</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link
@@ -214,7 +213,8 @@
 						Заполните форму и наши сотрудники свяжутся с вами для консультации
 					</p>
 
-					<form class="app-form" action="/" method="post">
+					<!-- Form -->
+					<form class="app-form" action="/" method="post" id="form">
 						<fieldset class="app-form__wrap">
 							<div class="app-form__inputs">
 								<div class="input-box">
@@ -223,6 +223,7 @@
 										type="text"
 										name="user-name"
 										placeholder="Ваше имя"
+										id="basic-name"
 									/>
 								</div>
 								<div class="input-box">
@@ -231,6 +232,7 @@
 										type="tel"
 										name="user-tel"
 										placeholder="Номер телефона"
+										id="basic-phone-number"
 									/>
 								</div>
 								<textarea
@@ -387,5 +389,6 @@
 		</footer>
 	</body>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 	<script src="js/main.js"></script>
 </html>

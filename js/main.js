@@ -97,47 +97,51 @@ const swiper = new Swiper(".image-slider", {
 });
 
 // Form validation
-function validation(form) {
-	function removeError(input) {
-		const parent = input.parentNode;
+// initialize the validation library
+const validation = new window.JustValidate("#form", {
+	errorFieldCssClass: "is-input-invalid",
+	errorLabelCssClass: "is-label-invalid",
 
-		if (parent.classList.contains("error-box")) {
-			parent.querySelector(".error-label").remove();
-			parent.classList.remove("error-box");
-		}
-	}
+	successFieldCssClass: "just-validate-success-field",
+	submitFormAutomatically: false,
+	lockForm: true,
+	successMessage: "Success Message",
+});
 
-	function createError(input, text) {
-		const parent = input.parentNode;
-		const errorLabel = document.createElement("label");
-
-		parent.classList.add("error-box");
-		parent.append(errorLabel);
-
-		errorLabel.classList.add("error-label");
-		errorLabel.textContent = text;
-	}
-
-	let result = true;
-	const allInputs = form.querySelectorAll("input");
-
-	for (const input of allInputs) {
-		removeError(input);
-
-		if (input.value === "") {
-			result = false;
-			createError(input, "*Поле обязательно для заполнения");
-		}
-	}
-	return result;
-}
-
-document
-	.querySelector(".app-form")
-	.addEventListener("submit", function (event) {
-		event.preventDefault(); // Для отмены перехода по умолчанию
-
-		if (validation(this) === true) {
-			alert("Форма проверена успешно!");
-		}
-	});
+validation
+	.addField("#basic-name", [
+		{
+			rule: "required",
+			errorMessage: "*Поле обязательно для заполнения",
+		},
+		{
+			rule: "minLength",
+			value: 3,
+			errorMessage: "Минимальное количество символов - 3",
+		},
+		{
+			rule: "maxLength",
+			value: 15,
+			errorMessage: "Минимальное количество символов - 15",
+		},
+	])
+	.addField("#basic-phone-number", [
+		{
+			rule: "required",
+			errorMessage: "*Поле обязательно для заполнения",
+		},
+		{
+			rule: "number",
+			errorMessage: "Неверный номер!",
+		},
+		{
+			rule: "minLength",
+			value: 11,
+			errorMessage: "Минимальное количество цифр - 11",
+		},
+		{
+			rule: "maxLength",
+			value: 11,
+			errorMessage: "Максимальное количество цифр - 11",
+		},
+	]);
