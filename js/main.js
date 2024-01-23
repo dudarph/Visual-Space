@@ -5,10 +5,10 @@
 	// Функция для плавной прокрутки
 	const smoothScroll = (targetEl, duration) => {
 		// Получаем высоту заголовка (header)
-		const headerElHeight = document.querySelector(".header").clientHeight;
+		// const headerElHeight = document.querySelector(".header").clientHeight;
 		let target = document.querySelector(targetEl);
 		// Получаем позицию целевого элемента относительно вьюпорта с учетом высоты заголовка
-		let targetPosition = target.getBoundingClientRect().top - headerElHeight;
+		let targetPosition = target.getBoundingClientRect().top; // - headerElHeight;
 		let startPosition = window.pageYOffset;
 		let startTime = null;
 
