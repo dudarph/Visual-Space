@@ -19,7 +19,7 @@
 @media screen and (max-width: 362px) {
 	.footer {
 		bottom: 0;
-		position: fixed;
+		position: static;
 		/* Футер будет приколочен чтобы не добавлять пространство снизу на мобилках */
 	}
 
