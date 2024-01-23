@@ -107,6 +107,7 @@ img {
 .btn {
 	border-radius: 16px;
 	background: #202020;
+	border: 0;
 }
 
 .heading {
