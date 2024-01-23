@@ -94,6 +94,18 @@ const swiper = new Swiper(".image-slider", {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
+
+	breakpoints: {
+		// 320: {
+		// 	slidesPerView: 1,
+		// },
+		// 480: {
+		// 	slidesPerView: 1,
+		// },
+		1232: {
+			slidesPerView: 1.8,
+		},
+	},
 });
 
 // Form validation

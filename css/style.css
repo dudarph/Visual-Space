@@ -97,7 +97,7 @@ img {
 }
 
 .wrapper {
-	max-width: 1200px;
+	width: 1200px;
 	margin: 0 auto;
 	padding: 0 16px;
 }
@@ -124,6 +124,10 @@ img {
 =============================*/
 .header {
 	padding: 23px 0;
+	min-width: 1200px;
+	/* Минимальная ширина для предотвращения уменьшения */
+	max-width: 100%;
+	/* Максимальная ширина для предотвращения "уезжания" */
 
 	border-bottom: solid 1px #181818;
 }
@@ -178,6 +182,17 @@ img {
 .header__button:active {
 	background-color: #121212;
 }
+
+/* Main
+=============================*/
+.main {
+	min-width: 1200px;
+	/* Минимальная ширина для предотвращения уменьшения */
+	max-width: 100%;
+	/* Максимальная ширина для предотвращения "уезжания" */
+}
+
+
 
 /* Services
 =============================*/
@@ -311,7 +326,7 @@ img {
 }
 
 .for-what__subtitle {
-	max-width: 716px;
+	width: 716px;
 }
 
 .for-what__text {
@@ -332,7 +347,7 @@ img {
 }
 
 .for-whom__subtitle {
-	max-width: 716px;
+	width: 716px;
 }
 
 .for-whom__text {
@@ -363,6 +378,7 @@ img {
 /* Form */
 .app-form__inputs {
 	margin-bottom: 42px;
+	max-width: 1200px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
@@ -431,7 +447,7 @@ img {
 textarea.app-form__input {
 	width: 654px;
 	max-width: 100%;
-	padding: 24px 0 0 23px;
+	padding: 24px 23px 0 23px;
 	resize: none;
 }
 
@@ -507,6 +523,10 @@ textarea.app-form__input {
 =============================*/
 .footer {
 	padding: 48px 0 73px 0;
+	min-width: 1200px;
+	/* Минимальная ширина для предотвращения уменьшения */
+	max-width: 100%;
+	/* Максимальная ширина для предотвращения "уезжания" */
 
 	background: #252525;
 }
@@ -517,7 +537,7 @@ textarea.app-form__input {
 }
 
 .footer__logo {
-	max-width: 211px;
+	width: 211px;
 	margin-right: 93px;
 }
 

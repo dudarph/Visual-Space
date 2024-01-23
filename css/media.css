@@ -1,0 +1,24 @@
+/* Media
+=============================*/
+@media screen and (max-width: 1232px) {
+
+	/* Form */
+	.app-form__inputs {
+		column-gap: 0;
+	}
+
+	textarea.app-form__input {
+		width: 500px;
+		max-width: 100%;
+		padding: 24px 23px 0 23px;
+		resize: none;
+
+	}
+}
+
+@media screen and (max-width: 362px) {
+	.footer {
+		min-height: 100vh;
+	}
+
+}
