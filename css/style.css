@@ -99,7 +99,7 @@ img {
 }
 
 .wrapper {
-	width: 1200px;
+	max-width: 1216px;
 	margin: 0 auto;
 	padding: 0 16px;
 }
@@ -127,10 +127,7 @@ img {
 =============================*/
 .header {
 	padding: 23px 0;
-	min-width: 1200px;
-	/* Минимальная ширина для предотвращения уменьшения */
 	max-width: 100%;
-	/* Максимальная ширина для предотвращения "уезжания" */
 
 	border-bottom: solid 1px #181818;
 }
@@ -203,10 +200,7 @@ img {
 /* Main
 =============================*/
 .main {
-	min-width: 1200px;
-	/* Минимальная ширина для предотвращения уменьшения */
 	max-width: 100%;
-	/* Максимальная ширина для предотвращения "уезжания" */
 }
 
 
@@ -231,15 +225,22 @@ img {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .services__nav-item {
-	margin-right: 144px;
+	/* margin-right: 144px; */
 	text-align: center;
 }
 
-.services__nav-item:last-child {
-	margin-right: 0;
+.services__nav-item:nth-child(1) {
+	max-width: 190px;
+}
+
+.services__nav-item:nth-child(2) {
+	max-width: 177px;
 }
 
 .services__nav-item:nth-child(3),
@@ -355,19 +356,21 @@ img {
 }
 
 .for-what {
+	max-width: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 145px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .for-what__title {
-	display: block;
 	white-space: nowrap;
 }
 
 .for-what__subtitle {
-	width: 716px;
+	max-width: 716px;
 }
 
 .for-what__text {
@@ -381,16 +384,17 @@ img {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	gap: 145px;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
 .for-whom__title {
-	display: block;
 	white-space: nowrap;
 }
 
 .for-whom__subtitle {
-	width: 716px;
+	max-width: 716px;
 }
 
 .for-whom__text {
@@ -419,6 +423,10 @@ img {
 }
 
 /* Form */
+.app-form__wrap {
+	max-width: 100%;
+}
+
 .app-form__inputs {
 	margin-bottom: 42px;
 	max-width: 1200px;
@@ -499,11 +507,6 @@ img {
 	-webkit-transition: .2s linear;
 	-o-transition: .2s linear;
 	transition: .2s linear;
-}
-
-.app-form__input:focus {
-	border: 2px solid #121212;
-	background-color: #E1E1E1;
 }
 
 .is-input-invalid,
@@ -617,14 +620,20 @@ textarea.app-form__input {
 	letter-spacing: 0.48px;
 }
 
+.s-net__link {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.s-net__link:last-child {
+	margin-right: 0;
+}
+
 /* Footer
 =============================*/
 .footer {
 	padding: 48px 0 73px 0;
-	min-width: 1200px;
-	/* Минимальная ширина для предотвращения уменьшения */
 	max-width: 100%;
-	/* Максимальная ширина для предотвращения "уезжания" */
 
 	background: #252525;
 }
@@ -637,7 +646,7 @@ textarea.app-form__input {
 }
 
 .footer__logo {
-	width: 211px;
+	max-width: 211px;
 	margin-right: 93px;
 }
 

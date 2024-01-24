@@ -13,13 +13,6 @@
 		width: 500px;
 		max-width: 100%;
 		padding: 24px 23px 0 23px;
-		resize: none;
 
-	}
-}
-
-@media screen and (max-width: 362px) {
-	.application {
-		margin-bottom: 400px;
 	}
 }
