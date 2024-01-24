@@ -693,8 +693,6 @@ textarea.app-form__input {
 }
 
 .footer__menu-title {
-	margin-bottom: 12px;
-
 	color: #E1E1E1;
 	font-size: 20px;
 	font-weight: 500;
@@ -702,8 +700,24 @@ textarea.app-form__input {
 	letter-spacing: 0.4px;
 }
 
+.footer__menu:nth-child(1) li:nth-child(1) .footer__menu-title {
+	padding-bottom: 16px;
+}
+
+.footer__menu:nth-child(1) li:nth-child(2) .footer__menu-title {
+	padding-bottom: 17px;
+}
+
+.footer__menu:nth-child(2) li:nth-child(1) .footer__menu-title {
+	padding-bottom: 16px;
+}
+
+.footer__menu:nth-child(3) li:nth-child(1) .footer__menu-title {
+	padding-bottom: 12px;
+}
+
 .footer__menu-link {
-	margin-bottom: 9px;
+	display: inline-block;
 
 	color: #C3C3C3;
 	font-size: 16px;
@@ -718,13 +732,21 @@ textarea.app-form__input {
 	transition: .2s linear;
 }
 
+.footer__menu:nth-child(1) .footer__menu-link {
+	padding-bottom: 9px;
+}
+
+.footer__menu:nth-child(2) .footer__menu-link {
+	padding-bottom: 12px;
+}
+
 .footer__menu-link:hover,
 .footer__menu-link:active {
 	color: #949191;
 }
 
 .footer__menu-info {
-	margin-bottom: 12px;
+	padding-bottom: 12px;
 
 	color: #C3C3C3;
 	font-size: 16px;
