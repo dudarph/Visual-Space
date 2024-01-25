@@ -486,6 +486,13 @@ img {
 	grid-area: 1 / 2 / 3 / 3;
 }
 
+.input-box {
+	max-width: 498px;
+
+	position: relative;
+	/* Релатив для лейбла */
+}
+
 .app-form__input {
 	width: 498px;
 	max-width: 100%;
@@ -509,13 +516,21 @@ img {
 	transition: .2s linear;
 }
 
-.is-input-invalid,
+.app-form__input:focus {
+	outline: none;
+}
+
+/* .is-input-invalid,
 .is-input-invalid:focus {
 	border: 2px solid #D45C5C;
+} */
+
+.is-input-invalid.app-form__input::placeholder {
+	color: #D45C5C;
 }
 
 .is-label-invalid {
-	padding-top: 5px;
+	padding-bottom: 5px;
 
 	color: #D45C5C;
 	font-family: 'Manrope';
@@ -523,12 +538,16 @@ img {
 	font-weight: 500;
 	line-height: 104.499%;
 	letter-spacing: 0.26px;
+
+	position: absolute;
+	/* Абсолют для того чтобы label не двигал инпуты */
+	bottom: 100%;
 }
 
-.just-validate-success-field,
+/* .just-validate-success-field,
 .just-validate-success-field:focus {
 	border: 2px solid #0af496;
-}
+} */
 
 
 textarea.app-form__input {
